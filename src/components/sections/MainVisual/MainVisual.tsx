@@ -16,19 +16,20 @@ export const MainVisual = () => {
   return (
     <section id="main-visual">
       <div className={styles.container}>
+        {/* テキスト */}
+        <div className={styles.text_wrapper}>
+          <div className={styles.text}>バーチャル山口を<br/>創造する</div>
+        </div>
+        {/* スライドショー */}
         <div
           className={styles.img_wrapper}
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {images.map((image, i) => (
-            <img
-              key={i}
-              src={image}
-              alt="VRCの画像"
-              className={styles.img}
-            />
+            <img key={i} src={image} alt="VRCの画像" className={styles.img} />
           ))}
         </div>
+        {/* スライドショー下のボタン */}
         <div className={styles.button_wrapper}>
           {images.map((_, i) => (
             <button

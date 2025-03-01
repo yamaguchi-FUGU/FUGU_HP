@@ -8,6 +8,20 @@
   overflow: hidden;
 }
 
+.text_wrapper {
+  z-index: 1;
+  position: absolute;
+  left: 5%;
+  top: 45%;
+}
+
+.text {
+  font-size: 64px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
 .img {
   width: 100%;
   height: 100%;
