@@ -18,16 +18,25 @@ export const MainVisual = () => {
       <div className={styles.container}>
         {/* テキスト */}
         <div className={styles.text_wrapper}>
-          <div className={styles.text}>バーチャル山口を<br/>創造する</div>
+          <div className={styles.text}>
+            バーチャル山口を
+            <br />
+            創造する
+          </div>
         </div>
         {/* スライドショー */}
-        <div
-          className={styles.img_wrapper}
-          style={{ transform: `translateX(-${index * 100}%)` }}
-        >
-          {images.map((image, i) => (
-            <img key={i} src={image} alt="VRCの画像" className={styles.img} />
-          ))}
+        <div className={styles.slider}>
+          <div
+            className={styles.img_wrapper}
+            style={{
+              transform: `translateX(-${index * 100}vw)`,
+              width: `${images.length * 100}vw`,
+            }}
+          >
+            {images.map((image, i) => (
+              <img key={i} src={image} alt="VRCの画像" className={styles.img} />
+            ))}
+          </div>
         </div>
         {/* スライドショー下のボタン */}
         <div className={styles.button_wrapper}>
