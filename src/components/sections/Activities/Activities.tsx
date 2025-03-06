@@ -36,10 +36,29 @@ export const Activities = () => {
 
       {/* Image Grid - 4 placeholder images */}
       <div className="activity-images">
-        <div className="activity-image-placeholder"></div>
-        <div className="activity-image-placeholder"></div>
-        <div className="activity-image-placeholder"></div>
-        <div className="activity-image-placeholder"></div>
+        <img
+          src="/images/activity1.png"
+          alt="画像１"
+          className="activity-image-placeholder"
+        />
+        <img
+          src="/images/activity2.png"
+          alt="画像２"
+          className="activity-image-placeholder"
+          loading="lazy"
+        />
+        <img
+          src="/images/activity3.png"
+          alt="画像３"
+          className="activity-image-placeholder"
+          loading="lazy"
+        />
+        <img
+          src="/images/activity4.png"
+          alt="画像４"
+          className="activity-image-placeholder"
+          loading="lazy"
+        />
       </div>
     </section>
   );
