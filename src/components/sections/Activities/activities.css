@@ -17,9 +17,17 @@
     letter-spacing: 0.05em;
 }
 
-/* 活動セクション（前の定義と同じ） */
+/* 活動セクション*/
 .activity-item {
-    /* 既存の定義 */
+    margin-bottom: 2rem;
+}
+/* 活動タイトル */
+.activity-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: blue;
+    margin-bottom: 1rem;
 }
 
 /* 画像グリッド - 4枚が画面に収まるように */
