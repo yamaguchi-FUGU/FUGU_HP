@@ -29,7 +29,7 @@ export const Activities = () => {
           </h3>
         </div>
         <div className="activity-description">
-          <p>リアルで集めってわいわい3Dスキャンをしようという会</p>
+          <p>リアルで集まってわいわい3Dスキャンをしようという会</p>
           <p>気軽に出来るオフ会、かつXR・テック系のイベントという立ち位置</p>
         </div>
       </div>
