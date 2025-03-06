@@ -1,6 +1,13 @@
 /* activities.css */
 
-/* Main heading styles */
+#activities {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* メインタイトル */
 #activities h2 {
     font-family: "Noto Sans JP", sans-serif;
     font-size: 2.5rem;
@@ -10,52 +17,12 @@
     letter-spacing: 0.05em;
 }
 
-/* Activity section styles */
+/* 活動セクション（前の定義と同じ） */
 .activity-item {
-    margin-bottom: 2rem;
+    /* 既存の定義 */
 }
 
-.activity-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.activity-icon {
-    background-color: rgba(240, 249, 255, 0.8);
-    border-radius: 50%;
-    padding: 0.5rem;
-}
-
-.activity-icon-inner {
-    background-color: #2563eb; /* Blue 600 color */
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-}
-
-.activity-title {
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2563eb; /* Blue 600 color */
-}
-
-.activity-description {
-    margin-left: 5rem;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #1f2937; /* Gray 800 color */
-}
-
-/* Image grid */
+/* 画像グリッド - 4枚が画面に収まるように */
 .activity-images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -64,11 +31,20 @@
 }
 
 .activity-image-placeholder {
-    background-color: #e5e7eb; /* Gray 200 color */
+    width: 100%;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Media queries for responsive design */
+.activity-image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* レスポンシブデザイン */
 @media (max-width: 1024px) {
     .activity-images {
         grid-template-columns: repeat(2, 1fr);
@@ -80,23 +56,7 @@
         grid-template-columns: 1fr;
     }
 
-    .activity-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .activity-description {
-        margin-left: 0;
-    }
-
     #activities h2 {
         font-size: 2rem;
     }
 }
-
-/* Font import - Make sure to include this at the top of your HTML file */
-/*
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-*/
