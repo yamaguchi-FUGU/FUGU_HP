@@ -8,9 +8,11 @@ export const Activities = () => {
       {/* Weekly Activity */}
       <div className="activity-item">
         <div className="activity-header">
-          <div className="activity-icon">
-            <div className="activity-icon-inner">🌐</div>
-          </div>
+          <img
+            src="/images/fugu.png"
+            alt="フグアイコン"
+            className="fugu-icon"
+          />
           <h3 className="activity-title">週1開催：VRChat漫遊</h3>
         </div>
         <p className="activity-description">
@@ -21,9 +23,11 @@ export const Activities = () => {
       {/* Monthly Activity */}
       <div className="activity-item">
         <div className="activity-header">
-          <div className="activity-icon">
-            <div className="activity-icon-inner">🌐</div>
-          </div>
+          <img
+            src="/images/fugu.png"
+            alt="フグアイコン"
+            className="fugu-icon"
+          />
           <h3 className="activity-title">
             月1開催：スキャンソン・VR体験会 or 勉強会(LT会)
           </h3>
