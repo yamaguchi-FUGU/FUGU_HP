@@ -1,0 +1,21 @@
+/* achievements.css */
+.achievements-section {
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.achievements-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.achievements-timeline {
+    width: 80%;
+    max-width: 800px;
+}
