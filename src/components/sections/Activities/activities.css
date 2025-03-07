@@ -38,22 +38,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* アクティビティアイコン */
-/*.activity-icon {
-    display: flex;
-    margin-right: 10px;
-}*/
-
-/*.activity-icon-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    background-color: #4285F4;
-    border-radius: 50%;
-}*/
-
 /* フグアイコン */
 .fugu-icon {
     width: 50px;
