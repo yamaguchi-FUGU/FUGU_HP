@@ -1,0 +1,85 @@
+/* activities.css */
+
+#activities {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* メインタイトル */
+#activities h2 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+/* 活動セクション*/
+.activity-item {
+    margin-bottom: 2rem;
+}
+
+/* 活動タイトル */
+.activity-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: blue;
+    margin-bottom: 1rem;
+}
+
+/* アクティビティヘッダー */
+.activity-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* フグアイコン */
+.fugu-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* 画像グリッド - 4枚が画面に収まるように */
+.activity-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.activity-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1024px) {
+    .activity-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .activity-images {
+        grid-template-columns: 1fr;
+    }
+
+    #activities h2 {
+        font-size: 2rem;
+    }
+}
