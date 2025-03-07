@@ -1,7 +1,31 @@
-import React from "react";
+import { useEffect } from "react";
 import "./achievements.css";
 
+declare global {
+  interface Window {
+    twttr: {
+      widgets: {
+        load: () => void;
+      };
+    };
+  }
+}
+
 export const Achievements = () => {
+  useEffect(() => {
+    // Check if Twitter widget script already exists
+    if (!window.twttr) {
+      const script = document.createElement("script");
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      script.charset = "utf-8";
+      document.body.appendChild(script);
+    } else {
+      // If script exists, reload widgets
+      window.twttr.widgets.load();
+    }
+  }, []);
+
   return (
     <section id="achievements" className="achievements-section">
       {/* Heading */}
@@ -19,26 +43,6 @@ export const Achievements = () => {
         >
           @Y_vr_FUGUのツイート
         </a>
-
-        {/* Twitter widget script - This needs to be included once in your app, typically in index.html */}
-        {React.useEffect(() => {
-          // Check if Twitter widget script already exists
-          if (!window.twttr) {
-            const script = document.createElement("script");
-            script.src = "https://platform.twitter.com/widgets.js";
-            script.async = true;
-            script.charset = "utf-8";
-            document.body.appendChild(script);
-          } else {
-            // If script exists, reload widgets
-            window.twttr.widgets.load();
-          }
-
-          // Cleanup on component unmount
-          return () => {
-            // Optional: remove the script on unmount if needed
-          };
-        }, [])}
       </div>
     </section>
   );
