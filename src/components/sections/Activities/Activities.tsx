@@ -1,11 +1,18 @@
 import "./activities.css";
 export const Activities = () => {
+  const images = [
+    { src: "/images/activity1.png", alt: "画像１" },
+    { src: "/images/activity2.png", alt: "画像２" },
+    { src: "/images/activity3.png", alt: "画像３" },
+    { src: "/images/activity4.png", alt: "画像４" },
+  ];
+
   return (
     <section id="activities" className="w-full">
-      {/* Main Header - "活動内容" (Activity Contents) */}
+      {/* メインヘッダー - "活動内容" */}
       <h2>活動内容</h2>
 
-      {/* Weekly Activity */}
+      {/* 週1開催の活動 */}
       <div className="activity-item">
         <div className="activity-header">
           <img
@@ -20,7 +27,7 @@ export const Activities = () => {
         </p>
       </div>
 
-      {/* Monthly Activity */}
+      {/* 月1開催の活動 */}
       <div className="activity-item">
         <div className="activity-header">
           <img
@@ -38,31 +45,17 @@ export const Activities = () => {
         </div>
       </div>
 
-      {/* Image Grid - 4 placeholder images */}
+      {/* 画像グリッド - 4つのプレースホルダー画像 */}
       <div className="activity-images">
-        <img
-          src="/images/activity1.png"
-          alt="画像１"
-          className="activity-image-placeholder"
-        />
-        <img
-          src="/images/activity2.png"
-          alt="画像２"
-          className="activity-image-placeholder"
-          loading="lazy"
-        />
-        <img
-          src="/images/activity3.png"
-          alt="画像３"
-          className="activity-image-placeholder"
-          loading="lazy"
-        />
-        <img
-          src="/images/activity4.png"
-          alt="画像４"
-          className="activity-image-placeholder"
-          loading="lazy"
-        />
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            className="activity-image-placeholder"
+            loading="lazy"
+          />
+        ))}
       </div>
     </section>
   );
