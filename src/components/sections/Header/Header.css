@@ -1,11 +1,10 @@
-/* src/components/sections/Header/Header.css */
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
+    padding: 7px 0;
     width: 100%;
-    height: 70px;
+    height: fit-content;
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
     z-index: 1000;
 }
@@ -14,57 +13,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     padding: 0 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo-container {
     display: flex;
-    align-items: center;
-    height: 100%;
 }
 
 .logo {
     height: 50px;
-    width: auto;
     object-fit: contain;
 }
 
 /* デスクトップナビゲーション */
-.navigation {
-    height: 100%;
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
-    height: 100%;
-    align-items: center;
-}
-
-.nav-item {
-    height: 100%;
-    display: flex;
     align-items: center;
 }
 
 .nav-link {
-    padding: 0 1.2rem;
     color: #333;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding: 0 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
     background: transparent;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .nav-link:hover {
@@ -74,12 +52,10 @@
 /* ハンバーガーメニュー */
 .hamburger-menu {
     display: none; /* デスクトップでは非表示 */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
     cursor: pointer;
     z-index: 1001;
+    font-size: 30px;
+    color: rgb(61, 61, 61);
 }
 
 .hamburger-menu span {
@@ -93,10 +69,10 @@
 /* モバイルナビゲーション */
 .mobile-nav {
     position: fixed;
-    top: 70px; /* ヘッダーの高さに合わせる */
+    top: 64px; /* ヘッダーの高さに合わせる */
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 999;
     max-height: 0;
     overflow: hidden;
@@ -112,10 +88,9 @@
     list-style: none;
     padding: 1rem;
     margin: 0;
-}
-
-.mobile-nav-item {
-    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .mobile-nav-link {
@@ -123,6 +98,8 @@
     width: 100%;
     padding: 0.8rem 0;
     text-align: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
     color: #333;
     font-size: 1rem;
     text-decoration: none;
