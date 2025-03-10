@@ -27,7 +27,7 @@ export const SNS = () => {
     },
     {
       icon: <RiNotionFill className={styles.sns_icon} />,
-      link: "https://discordapp.com/channels/1306257837428703312/1314022592331518002/1323278883289567283",
+      link: "https://energetic-case-c23.notion.site/VR-FUGU-1591df40b1ae8086ba30e795e927752e",
       title: "Notion",
       detail: "詳しい情報はこちら",
     },
