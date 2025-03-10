@@ -3,4 +3,11 @@
   font-weight: 900;
   text-align: center;
   letter-spacing: 0.05em;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
 }

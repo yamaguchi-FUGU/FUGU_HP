@@ -9,15 +9,17 @@ import { Footer } from "./components/sections/Footer/Footer.tsx";
 
 function App() {
   return (
-    <main style={{ gap: "30px", display: "flex", flexDirection: "column" }}>
+    <main>
       <Header />
       <MainVisual />
-      <About />
-      <Activities />
-      <Achievements />
-      <SNS />
-      <ContactForm />
-      <Footer />
+      <div style={{ gap: "90px", display: "flex", flexDirection: "column", paddingTop: "50px" }}>
+        <About />
+        <Activities />
+        <Achievements />
+        <SNS />
+        <ContactForm />
+        <Footer />
+      </div>
     </main>
   );
 }
