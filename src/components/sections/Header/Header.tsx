@@ -14,7 +14,11 @@ export const Header = () => {
     return (
         <header id="header" className="header">
             <div className="header-container">
-                <div className="logo-container">
+                <div
+                    className="logo-container"
+                    onClick={() => scrollToSection("main-visual")}
+                    style={{ cursor: 'pointer' }}
+                >
                     <img
                         src="/images/fugu_for_header.png"
                         alt="FUGU Logo"
