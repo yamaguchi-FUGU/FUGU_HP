@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/da77d1b3-786c-4822-9878-83f82b4bd498)
+
 # 山口VRサークル Fulldive Universal Gateway Unit公式ホームページのGithubリポジトリです
 
 ## 開発メンバー
