@@ -18,6 +18,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
+}
+
+.sns_part a:hover .sns_icon {
+  color: #383b46;
+  transform: translate(0, 5px);
 }
 
 .sns_link {
@@ -28,18 +34,20 @@
 }
 
 .sns_icon {
-  font-size: 100px;
+  font-size: 80px;
   color: black;
+  padding-bottom: 10px;
+  transition: all 0.3s;
 }
 
 .sns_title {
-  font-size: 30px;
+  font-size: 1.4rem;
   text-align: center;
   color: black;
 }
 
 .sns_detail {
-  font-size: 20px;
+  font-size: 1rem;
   text-align: center;
   color: black;
 }
