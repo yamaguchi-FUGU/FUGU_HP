@@ -53,11 +53,11 @@ export const SNS = () => {
     );
   };
   return (
-    <section className={styles.sns_wrapper}>
-      <h2>SNS</h2>
-      <div className={styles.sns_container}>
-        {SNSList.map((sns) => SNSPart(sns))}
-      </div>
-    </section>
+      <section id="sns" className={styles.sns_wrapper}>
+        <h2>SNS</h2>
+        <div className={styles.sns_container}>
+          {SNSList.map((sns) => SNSPart(sns))}
+        </div>
+      </section>
   );
 };
