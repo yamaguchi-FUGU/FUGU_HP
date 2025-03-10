@@ -32,6 +32,7 @@
     object-fit: contain;
 }
 
+/* デスクトップナビゲーション */
 .navigation {
     height: 100%;
 }
@@ -68,4 +69,79 @@
 
 .nav-link:hover {
     color: #0066cc;
+}
+
+/* ハンバーガーメニュー */
+.hamburger-menu {
+    display: none; /* デスクトップでは非表示 */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* モバイルナビゲーション */
+.mobile-nav {
+    position: fixed;
+    top: 70px; /* ヘッダーの高さに合わせる */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.open {
+    max-height: 300px; /* メニューが開いているときの高さ */
+}
+
+.mobile-nav-menu {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+}
+
+.mobile-nav-item {
+    margin: 1rem 0;
+}
+
+.mobile-nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav-link:hover {
+    color: #0066cc;
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* モバイルでは非表示 */
+    }
+
+    .hamburger-menu {
+        display: flex; /* モバイルでは表示 */
+    }
 }
