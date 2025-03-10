@@ -12,7 +12,7 @@ export const Activities = () => {
   const Heading = ({ title }: { title: string }) => {
     return (
       <div className="activity-header">
-        <img src="/images/fugu.png" alt="フグアイコン" className="fugu-icon" />
+        <img src="/images/fugu.svg" alt="フグアイコン" className="fugu-icon" />
         <h3 className="activity-title">{title}</h3>
       </div>
     );

@@ -12,7 +12,7 @@ function App() {
     <main style={{ gap: "30px", display: "flex", flexDirection: "column" }}>
       <Header />
       <MainVisual />
-      {/* <About /> */}
+      <About />
       <Activities />
       <Achievements />
       <SNS />
