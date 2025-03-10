@@ -3,6 +3,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { RiNotionFill } from "react-icons/ri";
 import styles from "./SNS.module.css";
+import { SectionTitle } from "../../common/SectionTitle/SectionTitle";
 
 type SNS = {
   icon: React.JSX.Element;
@@ -54,7 +55,7 @@ export const SNS = () => {
   };
   return (
       <section id="sns" className={styles.sns_wrapper}>
-        <h2>SNS</h2>
+        <SectionTitle>SNS</SectionTitle>
         <div className={styles.sns_container}>
           {SNSList.map((sns) => SNSPart(sns))}
         </div>

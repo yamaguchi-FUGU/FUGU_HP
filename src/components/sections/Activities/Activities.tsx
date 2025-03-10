@@ -1,4 +1,6 @@
 import "./activities.css";
+import { SectionTitle } from "../../common/SectionTitle/SectionTitle";
+
 export const Activities = () => {
   const images = [
     { src: "/images/activity1.png", alt: "画像１" },
@@ -7,7 +9,7 @@ export const Activities = () => {
     { src: "/images/activity4.png", alt: "画像４" },
   ];
 
-  const SectionTitle = ({ title }: { title: string }) => {
+  const Heading = ({ title }: { title: string }) => {
     return (
       <div className="activity-header">
         <img src="/images/fugu.png" alt="フグアイコン" className="fugu-icon" />
@@ -19,10 +21,10 @@ export const Activities = () => {
   return (
     <section id="activities">
       {/* メインヘッダー - "活動内容" */}
-      <h2>活動内容</h2>
+      <SectionTitle>活動内容</SectionTitle>
       {/* 週1開催の活動 */}
       <div className="activity-item">
-        <SectionTitle title="週1開催：VRChat漫遊" />
+        <Heading title="週1開催：VRChat漫遊" />
         <p className="activity-description">
           メンバーで一緒にVRChatのワールド巡りをして、わいわい楽しむ会
         </p>
@@ -30,7 +32,7 @@ export const Activities = () => {
 
       {/* 月1開催の活動 */}
       <div className="activity-item">
-        <SectionTitle title="月1開催：スキャンソン・VR体験会 or 勉強会(LT会)" />
+        <Heading title="月1開催：スキャンソン・VR体験会 or 勉強会(LT会)" />
         <div className="activity-description">
           <div>リアルで集まってわいわい3Dスキャンをしようという会</div>
           <div>気軽に出来るオフ会、かつXR・テック系のイベントという立ち位置</div>
