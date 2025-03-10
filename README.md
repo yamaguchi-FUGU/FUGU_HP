@@ -5,4 +5,10 @@
 - [しろさん](https://x.com/ksr03_dev)
 - [オトリフ](https://x.com/Otoriff_VR)
 
+## 採用技術
+- Github
+- React
+- TypeScript
+- Vite
+
 ## 開発に関するnote
