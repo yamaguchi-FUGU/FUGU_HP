@@ -1,1 +1,2 @@
-# 山口VRサークル Fulldive Universal Gateway Unitの公式ホームページです
+# 山口VRサークル Fulldive Universal Gateway Unit
+# 公式ホームページのGithubリポジトリです
