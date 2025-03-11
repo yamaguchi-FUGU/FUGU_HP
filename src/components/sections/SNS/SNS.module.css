@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
+  padding: 0 20px;
 }
 
 .sns_part {
@@ -50,4 +51,25 @@
   font-size: 1rem;
   text-align: center;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .sns_container {
+    gap: 10px;
+  }
+
+  .sns_part {
+    width: 160px;
+  }
+  .sns_icon {
+    font-size: 60px;
+  }
+
+  .sns_title {
+    font-size: 1.2rem;
+  }
+
+  .sns_detail {
+    font-size: 0.8rem;
+  }
 }

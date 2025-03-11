@@ -1,20 +1,9 @@
-/* activities.css */
-
 #activities {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-/* メインタイトル */
-#activities h2 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 3rem;
-    letter-spacing: 0.05em;
+    padding: 0rem 1rem;
+    box-sizing: border-box;
 }
 
 /* 活動セクション*/
@@ -22,20 +11,25 @@
     margin-bottom: 2rem;
 }
 
+.activity-description {
+    font-size: 1rem;
+    margin: 0;
+}
+
 /* 活動タイトル */
 .activity-title {
-    font-family: "Noto Sans JP", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: blue;
-    margin-bottom: 1rem;
+    background: linear-gradient(to right, #134BFD, #038AFE);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* アクティビティヘッダー */
 .activity-header {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem;
 }
 
 /* フグアイコン */
@@ -79,7 +73,11 @@
         grid-template-columns: 1fr;
     }
 
-    #activities h2 {
-        font-size: 2rem;
+    .activity-title {
+        font-size: 1.25rem;
+    }
+
+    .activity-description {
+        font-size: 0.9rem;
     }
 }

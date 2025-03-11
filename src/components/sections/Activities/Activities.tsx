@@ -1,4 +1,6 @@
 import "./activities.css";
+import { SectionTitle } from "../../common/SectionTitle/SectionTitle";
+
 export const Activities = () => {
   const images = [
     { src: "/images/activity1.png", alt: "画像１" },
@@ -7,21 +9,22 @@ export const Activities = () => {
     { src: "/images/activity4.png", alt: "画像４" },
   ];
 
-  return (
-    <section id="activities" className="w-full">
-      {/* メインヘッダー - "活動内容" */}
-      <h2>活動内容</h2>
+  const Heading = ({ title }: { title: string }) => {
+    return (
+      <div className="activity-header">
+        <img src="/images/fugu.svg" alt="フグアイコン" className="fugu-icon" />
+        <h3 className="activity-title">{title}</h3>
+      </div>
+    );
+  };
 
+  return (
+    <section id="activities">
+      {/* メインヘッダー - "活動内容" */}
+      <SectionTitle>活動内容</SectionTitle>
       {/* 週1開催の活動 */}
       <div className="activity-item">
-        <div className="activity-header">
-          <img
-            src="/images/fugu.png"
-            alt="フグアイコン"
-            className="fugu-icon"
-          />
-          <h3 className="activity-title">週1開催：VRChat漫遊</h3>
-        </div>
+        <Heading title="週1開催：VRChat漫遊" />
         <p className="activity-description">
           メンバーで一緒にVRChatのワールド巡りをして、わいわい楽しむ会
         </p>
@@ -29,19 +32,10 @@ export const Activities = () => {
 
       {/* 月1開催の活動 */}
       <div className="activity-item">
-        <div className="activity-header">
-          <img
-            src="/images/fugu.png"
-            alt="フグアイコン"
-            className="fugu-icon"
-          />
-          <h3 className="activity-title">
-            月1開催：スキャンソン・VR体験会 or 勉強会(LT会)
-          </h3>
-        </div>
+        <Heading title="月1開催：スキャンソン・VR体験会 or 勉強会(LT会)" />
         <div className="activity-description">
-          <p>リアルで集まってわいわい3Dスキャンをしようという会</p>
-          <p>気軽に出来るオフ会、かつXR・テック系のイベントという立ち位置</p>
+          <div>リアルで集まってわいわい3Dスキャンをしようという会</div>
+          <div>気軽に出来るオフ会、かつXR・テック系のイベントという立ち位置</div>
         </div>
       </div>
 

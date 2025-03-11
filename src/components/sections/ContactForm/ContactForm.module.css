@@ -4,10 +4,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 20px;
 }
 
-.contact_wrapper div {
-  font-size: 1.3rem;
+.message {
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -21,8 +22,9 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.4rem;
-  padding: 7px 25px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 10px 30px;
   margin-top: 10px;
   transition: all 0.3s;
 }
@@ -34,16 +36,16 @@
 /*レスポンシブ対応*/
 @media (max-width: 768px) {
   .contact_wrapper div {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 525px) {
   .contact_wrapper div {
-    width: 250px;
+    width: 300px;
   }
 
   .contact_button {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
