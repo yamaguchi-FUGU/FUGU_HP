@@ -3,6 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  padding-top: 5rem;
   position: relative;
   background-image: url("/images/fugu.svg");
   background-repeat: no-repeat;
