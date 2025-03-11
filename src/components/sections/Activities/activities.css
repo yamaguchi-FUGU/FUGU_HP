@@ -20,7 +20,9 @@
 .activity-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: blue;
+    background: linear-gradient(to right, #134BFD, #038AFE);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* アクティビティヘッダー */
