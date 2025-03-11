@@ -36,7 +36,7 @@ export const SNS = () => {
 
   const SNSPart = (sns: SNS) => {
     return (
-      <div className={styles.sns_part}>
+      <div key={sns.title} className={styles.sns_part}>
         <a
           href={sns.link}
           target="_blank"
