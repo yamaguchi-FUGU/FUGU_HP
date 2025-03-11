@@ -73,7 +73,11 @@
         grid-template-columns: 1fr;
     }
 
-    #activities h2 {
-        font-size: 2rem;
+    .activity-title {
+        font-size: 1.25rem;
+    }
+
+    .activity-description {
+        font-size: 0.9rem;
     }
 }
