@@ -10,9 +10,12 @@
 }
 
 .achievements-heading {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
 }
 
 .achievements-timeline {
