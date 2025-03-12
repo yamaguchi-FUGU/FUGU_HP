@@ -3,4 +3,8 @@ body {
   padding: 0;
   background-color: white;
   font-family: "Noto Sans JP", sans-serif;
+  background-image: url("images/background.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
 }
