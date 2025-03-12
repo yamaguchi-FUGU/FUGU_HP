@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import "./achievements.css";
+import { SectionTitle } from "../../common/SectionTitle/SectionTitle";
+import { FaChevronRight } from "react-icons/fa";
 
 declare global {
   interface Window {
-    twttr: {
+    twitter: {
       widgets: {
         load: () => void;
       };
@@ -13,36 +15,38 @@ declare global {
 
 export const Achievements = () => {
   useEffect(() => {
-    // Check if Twitter widget script already exists
-    if (!window.twttr) {
-      const script = document.createElement("script");
-      script.src = "https://platform.twitter.com/widgets.js";
-      script.async = true;
-      script.charset = "utf-8";
-      document.body.appendChild(script);
-    } else {
-      // If script exists, reload widgets
-      window.twttr.widgets.load();
-    }
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
     <section id="achievements" className="achievements-section">
-      {/* Heading */}
-      <h2 className="achievements-heading">活動実績</h2>
+      <SectionTitle>活動実績</SectionTitle>
 
-      {/* Twitter Timeline */}
-      <div className="achievements-timeline">
-        {/* Twitter Timeline Widget */}
-        <a
-          className="twitter-timeline"
-          data-height="600"
-          data-theme="light"
-          data-lang="ja"
-          href="https://twitter.com/Y_vr_FUGU"
-        >
-          @Y_vr_FUGUのツイート
-        </a>
+      <div className="achievements-container">
+        <div className="spinner-wrapper">
+          <div className="spinner"></div>
+        </div>
+
+        {/* Twitter Timeline */}
+        <div className="achievements-timeline">
+          <a
+            className="twitter-timeline"
+            data-height="600"
+            data-theme="light"
+            data-lang="ja"
+            href="https://twitter.com/Y_vr_FUGU"
+          >
+            @Y_vr_FUGUのツイート
+            <FaChevronRight />
+          </a>
+        </div>
       </div>
     </section>
   );
