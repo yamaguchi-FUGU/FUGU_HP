@@ -30,9 +30,9 @@ export const Achievements = () => {
       <SectionTitle>活動実績</SectionTitle>
 
       <div className="achievements-container">
-        <div className="spinner-wrapper">
+        {/* <div className="spinner-wrapper">
           <div className="spinner"></div>
-        </div>
+        </div> */}
 
         {/* Twitter Timeline */}
         <div className="achievements-timeline">
