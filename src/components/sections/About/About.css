@@ -52,6 +52,24 @@
   margin-top: 1rem;
 }
 
+.speakerdeck-iframe-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.speakerdeck-iframe {
+  border: none;
+  background: padding-box padding-box rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  padding: 0;
+  border-radius: 6px;
+  width: 95%;
+  max-width: 1000px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 /* レスポンシブデザイン対応 */
 @media (max-width: 768px) {
   .about-section {
