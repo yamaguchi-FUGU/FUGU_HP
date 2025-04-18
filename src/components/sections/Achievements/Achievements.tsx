@@ -24,7 +24,7 @@ export const Achievements = () => {
   useEffect(() => {
     getEvents().then((res: GetEventsRes | null) => {
       console.log(res);
-      if (!res) return; 
+      if (!res) return;
       setEvents(res.results);
     });
   }, []);
@@ -44,31 +44,54 @@ export const Achievements = () => {
     <section id="achievements" className="achievements-section">
       <SectionTitle>活動実績</SectionTitle>
 
-      {events && events.slice(0, 3).map((event: NotionPage) => (
-        <a key={event.id} target="__brank" href={event.public_url} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-          <img  style={{ width: '200px' }} src={event.cover?.type === 'file' ? event.cover.file.url : event.cover?.external.url} />
-          <div>{event.properties.名前.title[0].plain_text}</div>
-        </a>
-      ))}
-
       <div className="achievements-container">
-        {/* 挙動が不安定だったので一旦コメントアウト
+        <div className="events_container">
+          {events &&
+            events.slice(0, 3).map((event: NotionPage) => (
+              <a
+                key={event.id}
+                target="_blank"
+                href={event.public_url}
+                className="event"
+              >
+                <img
+                  src={
+                    event.cover?.type === "file"
+                      ? event.cover.file.url
+                      : event.cover?.external.url
+                  }
+                />
+                <div>
+                  <div className="event_date">
+                    {event.properties.開催日.date.start}
+                  </div>
+                  <div className="event_name">
+                    {event.properties.名前.title[0].plain_text}
+                  </div>
+                </div>
+              </a>
+            ))}
+        </div>
+
+        <div className="timeline-container">
+          {/* 挙動が不安定だったので一旦コメントアウト
         <div className="spinner-wrapper">
           <div className="spinner"></div>
         </div> */}
 
-        {/* Twitter Timeline */}
-        <div className="achievements-timeline">
-          <a
-            className="twitter-timeline"
-            data-height="600"
-            data-theme="light"
-            data-lang="ja"
-            href="https://twitter.com/Y_vr_FUGU"
-          >
-            @Y_vr_FUGUのツイート
-            <FaChevronRight />
-          </a>
+          {/* Twitter Timeline */}
+          <div className="timeline">
+            <a
+              className="twitter-timeline"
+              data-height="600"
+              data-theme="light"
+              data-lang="ja"
+              href="https://twitter.com/Y_vr_FUGU"
+            >
+              @Y_vr_FUGUのツイート
+              <FaChevronRight />
+            </a>
+          </div>
         </div>
       </div>
     </section>
