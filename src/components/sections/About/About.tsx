@@ -36,14 +36,13 @@ export const About = () => {
           </a>
         </div>
       </div>
-      <div className="speakerdeck-iframe-container">
+      <div className="googleslides-iframe-container">
         <iframe
-          className="speakerdeck-iframe"
+          className="googleslides-iframe"
+          title="自己紹介スライド"
+          src="https://docs.google.com/presentation/d/e/2PACX-1vQYs9R-n7ryGBCydjHpLiSg5ERNMB2NlwOdKA5C6KAtg-KXLspwQTZIFrfiobqSpBY_Ip8n8fm59hnH/pubembed?start=true&loop=true&delayms=5000"
           frameBorder={0}
-          src="https://speakerdeck.com/player/3a8b9736fe994ca0b4eec13627b3dd94"
-          title="アップロードテスト"
           allowFullScreen
-          data-ratio="1.7777777777777777"
         ></iframe>
       </div>
     </section>
