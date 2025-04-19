@@ -4,7 +4,7 @@ import { SectionTitle } from "../../common/SectionTitle/SectionTitle";
 import { FaChevronRight } from "react-icons/fa";
 import { getEvents } from "../../../utils/getEvents";
 import { NotionPage } from "../../../type/NotionPage";
-import { GetEventsRes } from "../../../type/res/getEventsRes";
+import { GetEventsRes } from "../../../type/res/GetEventsRes";
 
 // 表示するイベントの最大数
 const MAX_EVENTS = 7;

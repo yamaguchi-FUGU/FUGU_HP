@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GetEventsRes } from "../type/res/getEventsRes";
+import { GetEventsRes } from "../type/res/GetEventsRes";
 
 const integration_secret = import.meta.env.VITE_INTEGRATION_SECRET;
 const db_id = import.meta.env.VITE_DB_ID;
