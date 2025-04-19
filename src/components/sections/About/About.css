@@ -52,13 +52,13 @@
   margin-top: 1rem;
 }
 
-.speakerdeck-iframe-container {
+.googleslides-iframe-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.speakerdeck-iframe {
+.googleslides-iframe {
   border: none;
   background: padding-box padding-box rgba(0, 0, 0, 0.1);
   margin: 15px 0;
