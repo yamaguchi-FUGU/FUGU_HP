@@ -9,6 +9,7 @@ export const Activities = () => {
     { src: "/images/activity4.png", alt: "画像４" },
   ];
 
+  // 小見出し
   const Heading = ({ title }: { title: string }) => {
     return (
       <div className="activity-header">

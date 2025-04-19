@@ -7,9 +7,95 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  gap: 2rem;
 }
 
 .achievements-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* 直近のイベント */
+.events_container {
+  width: 95%;
+  max-width: 1000px;
+  gap: 1rem;
+  display: flex;
+  overflow-x: auto;
+}
+
+.event {
+  width: 300px;
+  padding: 5px 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.event:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.event > img {
+  width: 300px;
+  aspect-ratio: 1.5;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.event:hover > img {
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+.event > div {
+  color: black;
+  padding: 5px 10px;
+}
+
+.event_date {
+  font-size: 0.8rem;
+  line-height: 0.5rem;
+}
+
+.event_name {
+  font-size: 1.1rem;
+}
+
+.event_button {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.event_button:hover {
+  transform: translate(0, -3px);
+}
+
+.event_button_text {
+  width: 70px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+/* タイムライン */
+.timeline-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,13 +104,13 @@
   padding: 0 1rem;
 }
 
-.achievements-timeline {
+.timeline {
   width: 80%;
   max-width: 600px;
   z-index: 1;
 }
 
-.achievements-timeline a {
+.timeline a {
   padding: 10px 20px;
   /* margin: 130px auto 0 auto; */
   margin: 30px auto 0 auto;
@@ -43,7 +129,7 @@
   gap: 10px;
 }
 
-.achievements-timeline a:hover {
+.timeline a:hover {
   background-color: #f0f0f0;
 }
 
