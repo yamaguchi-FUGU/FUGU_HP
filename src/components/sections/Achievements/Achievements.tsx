@@ -25,7 +25,6 @@ export const Achievements = () => {
   // イベントの取得
   useEffect(() => {
     getEvents().then((res: GetEventsRes | null) => {
-      console.log(res);
       if (!res) return;
       setEvents(res.results);
     });
