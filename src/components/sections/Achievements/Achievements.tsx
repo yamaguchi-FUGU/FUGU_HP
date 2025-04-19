@@ -6,6 +6,8 @@ import { getEvents } from "../../../utils/getEvents";
 import { NotionPage } from "../../../type/NotionPage";
 import { GetEventsRes } from "../../../type/res/getEventsRes";
 
+// 表示するイベントの最大数
+const MAX_EVENTS = 7;
 declare global {
   interface Window {
     twitter: {
@@ -47,7 +49,7 @@ export const Achievements = () => {
       <div className="achievements-container">
         <div className="events_container">
           {events &&
-            events.slice(0, 3).map((event: NotionPage) => (
+            events.slice(0, MAX_EVENTS).map((event: NotionPage) => (
               <a
                 key={event.id}
                 target="_blank"
@@ -71,6 +73,14 @@ export const Achievements = () => {
                 </div>
               </a>
             ))}
+          <a
+            className="event_button"
+            href="https://energetic-case-c23.notion.site/VR-FUGU-1591df40b1ae8086ba30e795e927752e"
+            target="_blank"
+          >
+            <FaChevronRight size={40} color="rgb(0.1, 0.1, 0.1)" />
+            <div className="event_button_text">もっと見る</div>
+          </a>
         </div>
 
         <div className="timeline-container">
