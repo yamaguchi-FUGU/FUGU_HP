@@ -1,24 +1,19 @@
-import axios from "axios";
 import { GetEventsRes } from "../type/res/GetEventsRes";
 
-const integration_secret = import.meta.env.VITE_INTEGRATION_SECRET;
-const db_id = import.meta.env.VITE_DB_ID;
-
-// Notion DBからイベント情報を取得する関数
+// Notion DBからイベント情報を取得する関数（API経由）
 export async function getEvents(): Promise<GetEventsRes | null> {
   try {
-    const res = await axios({
-      method: "post",
-      url: `/api/v1/databases/${db_id}/query`,
-      headers: {
-        "Authorization": `Bearer ${integration_secret}`,
-        "Content-Type": "application/json",
-        "Notion-Version": "2022-06-28",
-      },
-    });
-    return res.data;
+    const res = await fetch("/api/events");
+    
+    if (!res.ok) {
+      const errorData = await res.json();
+      console.error("API Error:", errorData);
+      throw new Error(`Failed to fetch events: ${res.statusText}`);
+    }
+    
+    return await res.json();
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching events:", error);
     return null;
   }
 }
