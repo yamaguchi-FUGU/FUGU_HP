@@ -14,6 +14,30 @@
   text-align: center;
 }
 
+.button_group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.discord_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.discord_label {
+  font-size: 0.95rem;
+  color: #5865F2;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .contact_button {
   width: fit-content;
   padding: 10px;
@@ -27,12 +51,37 @@
   font-size: 1.5rem;
   font-weight: 500;
   padding: 10px 30px;
-  margin-top: 10px;
   transition: all 0.3s;
 }
 
 .contact_button:hover {
   background-color: #084fcb;
+}
+
+.discord_button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 10px 30px;
+  background-color: #5865F2;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.discord_button:hover {
+  background-color: #4752c4;
+}
+
+.discord_icon {
+  font-size: 1.6rem;
 }
 
 /*レスポンシブ対応*/
@@ -48,6 +97,10 @@
   }
 
   .contact_button {
+    font-size: 1.5rem;
+  }
+
+  .discord_button {
     font-size: 1.5rem;
   }
 }

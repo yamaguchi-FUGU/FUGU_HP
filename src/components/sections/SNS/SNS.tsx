@@ -18,7 +18,7 @@ export const SNS = () => {
       icon: <FaTwitter className={styles.sns_icon} />,
       link: "https://x.com/Y_vr_FUGU",
       title: "Twitter",
-      detail: "最新情報・お問い合わせは</br>こちら",
+      detail: "最新情報・お問い合わせはこちら",
     },
     {
       icon: <FaGithub className={styles.sns_icon} />,

@@ -16,8 +16,8 @@ function App() {
         <About />
         <Activities />
         <Achievements />
-        <SNS />
         <ContactForm />
+        <SNS />
         <Footer />
       </div>
     </main>

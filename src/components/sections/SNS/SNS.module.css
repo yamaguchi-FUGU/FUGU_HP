@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .sns_container {
@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
+  gap: 30px;
   padding: 0 20px;
 }
 
@@ -19,12 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 170px;
 }
 
 .sns_part a:hover .sns_icon {
   color: #383b46;
-  transform: translate(0, 5px);
+  transform: translate(0, 4px);
 }
 
 .sns_link {
@@ -35,41 +35,42 @@
 }
 
 .sns_icon {
-  font-size: 80px;
-  color: black;
-  padding-bottom: 10px;
+  font-size: 48px;
+  color: #555;
+  padding-bottom: 6px;
   transition: all 0.3s;
 }
 
 .sns_title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
-  color: black;
+  color: #555;
 }
 
 .sns_detail {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
-  color: black;
+  color: #888;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .sns_container {
-    gap: 10px;
+    gap: 16px;
   }
 
   .sns_part {
-    width: 160px;
+    width: 150px;
   }
   .sns_icon {
-    font-size: 60px;
+    font-size: 36px;
   }
 
   .sns_title {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .sns_detail {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
