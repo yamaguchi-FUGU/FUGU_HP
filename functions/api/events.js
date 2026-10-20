@@ -1,12 +1,12 @@
 /**
- * Notion APIからイベント情報を取得するAPI
+ * Notion APIからイベント情報を取得するAPI（Cloudflare Pages Functions）
  */
-export default async function handler(req, res) {
-  const NOTION_SECRET = process.env.INTEGRATION_SECRET;
-  const NOTION_DB_ID = process.env.DB_ID;
+export async function onRequestGet({ env }) {
+  const NOTION_SECRET = env.INTEGRATION_SECRET;
+  const NOTION_DB_ID = env.DB_ID;
 
   if (!NOTION_SECRET || !NOTION_DB_ID) {
-    return res.status(500).json({ error: "Missing Notion credentials" });
+    return Response.json({ error: "Missing Notion credentials" }, { status: 500 });
   }
 
   try {
@@ -26,16 +26,19 @@ export default async function handler(req, res) {
     if (!notionRes.ok) {
       const errorData = await notionRes.json();
       console.error("Notion API Error:", errorData);
-      return res.status(notionRes.status).json(errorData);
+      return Response.json(errorData, { status: notionRes.status });
     }
 
     const data = await notionRes.json();
-    return res.status(200).json(data);
+    return Response.json(data);
   } catch (err) {
     console.error("Server Error:", err);
-    return res.status(500).json({
-      error: "Internal Server Error",
-      details: err instanceof Error ? err.message : String(err),
-    });
+    return Response.json(
+      {
+        error: "Internal Server Error",
+        details: err instanceof Error ? err.message : String(err),
+      },
+      { status: 500 }
+    );
   }
 }
