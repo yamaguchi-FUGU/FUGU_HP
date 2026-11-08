@@ -25,7 +25,7 @@ export const Activities = () => {
       <SectionTitle>活動内容</SectionTitle>
       {/* 週1開催の活動 */}
       <div className="activity-item">
-        <Heading title="週1開催：VRChat漫遊" />
+        <Heading title="週1開催：VRChat交流会" />
         <p className="activity-description">
           メンバーで一緒にVRChatのワールド巡りをして、わいわい楽しむ会
         </p>
