@@ -6,6 +6,7 @@ import { Achievements } from "./components/sections/Achievements/Achievements.ts
 import { SNS } from "./components/sections/SNS/SNS.tsx";
 import { ContactForm } from "./components/sections/ContactForm/ContactForm.tsx";
 import { Footer } from "./components/sections/Footer/Footer.tsx";
+import { YouTubeArchives } from "./components/sections/YouTubeArchives/YouTubeArchives.tsx"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Activities />
         <Achievements />
+        <YouTubeArchives />
         <ContactForm />
         <SNS />
         <Footer />
